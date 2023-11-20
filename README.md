@@ -6,6 +6,7 @@ An e-commerce backend application
 - Spring Data JPA
 - Spring Security with JWT Authentication
 - MySQL Database
+- Docker
 
 # User Features:
 
