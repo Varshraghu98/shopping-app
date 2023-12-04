@@ -35,7 +35,7 @@ pipeline {
     }
     stage('Update Deployment File') {
         environment {
-            GIT_REPO_NAME = "deployment-manifest"
+            GIT_REPO_NAME = "shopping-app"
             GIT_USER_NAME = "varshraghu98"
         }
         steps {
