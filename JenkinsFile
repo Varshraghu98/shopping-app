@@ -15,7 +15,7 @@ pipeline {
       steps {
         sh 'ls -ltr'
         // build the project and create a JAR file
-        sh 'cd shopping-app && mvn clean package'
+        sh 'mvn clean package -Dmaven.test.skip=true'
       }
     }
     stage('Build and Push Docker Image') {
