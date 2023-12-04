@@ -42,10 +42,10 @@ pipeline {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
                     git config user.email "varshraghu@gmail.com"
-                    git config user.name "Varshini Raghunath"
+                    git config user.name "VarshiniRaghunath"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" shopping-app/deployment.yml
-                    git add shopping-app/deployment.yml
+                    sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" deployment.yml
+                    git add deployment.yml
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
                     git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
                 '''
