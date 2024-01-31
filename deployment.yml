@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: shopping-app
-          image: varshini98/shopping-app:replaceImageTag
+          image: varshini98/shopping-app:16
           ports:
             - containerPort: 8080
